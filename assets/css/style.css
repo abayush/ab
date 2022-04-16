@@ -1,0 +1,195 @@
+:root{
+    --eye-size:100px;
+    --eye-backcolor:red;
+    --eye-color:#000;
+    --eye-shaadow:#adadad59;
+    --eye-boll-shadow:rgb(27, 27 ,27);
+    
+}
+{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:serif;
+
+}
+body{
+    background-color: #000;
+}
+
+
+h2{
+    text-align: center;
+    color: var(--eye-backcolor);
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 10px;
+    margin-bottom: 100px;
+
+}
+.card{
+    /*background-color: white;*/
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+.eye{
+    height: var(--eye-size);
+    width: var(--eye-size);
+    background-color: var(--eye-backcolor);
+    border: 6px solid var(--eye-color);
+    position: relative;
+
+   
+}
+.circle{
+    border-radius: 100%;
+}
+.center{
+    margin: 50%;
+    transform: translate(-50%,-50%);
+}
+.eye-ball{
+    height: 55%;
+    width: 55%;
+    position: relative;
+    border: 4px solid var(--eye-color);
+    border-radius: 100%;
+    opacity: 0.5;
+   
+
+    
+
+}
+.eye-ball>div:first-of-type{
+    height: 100%;
+    width: 100%;
+    background-color: red;
+    position: absolute;
+
+}
+.eye-ball>div:nth-of-type(2){
+    position: absolute;
+    height: 45%;
+    width: 45%;
+    background-color:var(--eye-color) ;
+    box-shadow: 0 0 21px 3px var(--eye-boll-shadow);
+}
+
+
+.sp{
+    height: 50%;
+    width: 50%;
+    position: absolute;
+    font-size: 65px;
+}
+
+
+.sp span{
+    font-weight: bolder;
+    position: absolute;
+    display: block;
+    top: -44px;
+    color: var(--eye-color);
+}
+
+
+.eye-ball>div:nth-of-type(3){
+    top: -46%;
+    left: 66%;
+    transform: rotate(243deg);
+}
+
+.eye-ball>div:nth-of-type(4){
+    bottom: -46%;
+    right: -20%;
+    transform: rotate(-1deg);
+}
+
+.eye-ball>div:last-of-type{
+    bottom: 18%;
+    left: -60%;
+    transform: rotate(112deg);
+}
+
+/* animation*/
+
+@keyframes animation1{
+    0%{
+        transform: rotate(360deg);
+    }
+    70%,100%{
+        transform: rotate(-360deg);
+    }
+}
+
+.sharingan1{
+    animation: animation1 10s ease-in-out infinite;
+    animation-fill-mode: forwards ;
+}
+
+
+
+
+
+/*sharingan2*/
+
+.sharingan1{
+   /*display: none;*/
+}
+
+.sharingan2 .sp{
+    width: 100%;
+    height: 100%;
+    font-size: 170px ;
+}
+.sharingan2 .eye-ball>div:first-of-type{
+    opacity: 1;
+    background-color: var(--eye-color);
+    width: 105%;
+    height: 100%;
+    margin: 50%;
+    transform: translate(-50%,-50%);
+}
+.sharingan2 .eye-ball>div:nth-of-type(2){
+   background-color: var(--eye-backcolor);
+   z-index: 777;
+}
+   
+
+.eye-ball1>div:nth-of-type(3){
+    top: -11%;
+    left: 5%;
+    transform: rotate(243deg);
+}
+
+.eye-ball1>div:nth-of-type(4){
+    bottom: -8%;
+    right: -1%;
+    transform: rotate(-1deg);
+}
+
+.eye-ball1>div:last-of-type{
+    bottom: 4%;
+    left: -10%;
+    transform: rotate(112deg);
+}
+
+
+.eye-ball1{
+    height: 60%;
+    width: 60%;
+    position: relative;
+    border: 4px solid var(--eye-color);
+    border-radius: 100%;
+    opacity: 0.5;
+}
+
+
+.sharingan2{
+    animation: animation1 10s ease-in-out infinite;
+}
